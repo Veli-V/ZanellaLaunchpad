@@ -1,0 +1,901 @@
+{
+	"launchpad": {
+ 		"0": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"1": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"2": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"3": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"4": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"5": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"6": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"7": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"8": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"9": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"10": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"11": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"12": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"13": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"14": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"15": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"16": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"17": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"18": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"19": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"20": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"21": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"22": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"23": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"24": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"25": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"26": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"27": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"28": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"29": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"30": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"31": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"32": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"33": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"34": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"35": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"36": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"37": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"38": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"39": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"40": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"41": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"42": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"43": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"44": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"45": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"46": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"47": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"48": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"49": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"50": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"51": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"52": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"53": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"54": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"55": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"56": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"57": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"58": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"59": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"60": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"61": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"62": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		},
+		"63": {
+                
+			"status_byte": "0x90",
+                
+			"data_byte_1": "0x71",
+                
+			"data_byte_2": "0x76",
+                
+			"additional_data": {
+				"type":"hit",
+				"color":"blue" 
+			}
+                
+		}
+ 
+	}
+}
