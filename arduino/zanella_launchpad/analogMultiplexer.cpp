@@ -29,14 +29,16 @@ int type;
 analogMultiplexer::analogMultiplexer() {
 }
 
-void analogMultiplexer::Begin(int analogpin, int pinage[], int boardType) {
+void analogMultiplexer::Begin(int analogpin, int pinage[], int numberOfControlPins, int boardType) {
+  //delay(1000);
   SIG = analogpin;
-  numberOfPins = sizeof(pinage)/sizeof(pinage[0]);
+  numberOfPins = numberOfControlPins;
   type = boardType;
-  
+  Serial.println("number of pins :"+String(numberOfPins));
   //Declares the pins that will control the S0, S1, S2, S3, ... pins of the board, as output 
   for (int h=0; h<numberOfPins; h++) {
     pinMode(pinage[h], OUTPUT);
+    Serial.println("pin: "+String(pinage[h])+" OUTPUT");
   }
   
   #if defined (chipCD74HC4067)
@@ -63,10 +65,10 @@ int analogMultiplexer::Read(int pin, int type) {//The method that reads a specif
    
    #if defined (chip74HC4051)
     if (type==chip74HC4051){//even if there's minor difference between these two boards, i prefer to write a separate case for each one, because other boards may be a lot different
-      for(int i = 0; i < chip74HC4051_KEYSIZE; i++)
-      {
-        digitalWrite(pins_chip74HC4051[i], bitRead(pin, i));
-        Serial.println("dW("+String(pins_chip74HC4051[i])+","+String(bitRead(pin, i)));
+      Serial.println("startshere");
+      for (int k=0; k<3; k++) {
+        digitalWrite(pins_chip74HC4051[k], bitRead(pin, k));
+        Serial.println("dW(pin: "+String(pins_chip74HC4051[k])+","+String(bitRead(pin, k))+")");
       }
       return analogRead(SIG);
     }
