@@ -20,27 +20,30 @@
 class analogMultiplexer
 {
   public:
-    analogMultiplexer(int analogpin, int pinage[], int boardType);
+    //Variables
     int type;
-    //bool pinsToNotRead[];
-    #if defined (chip74HC4051)
-    int pins_chip74HC4051[3];//pins for chip74HC4051
-    #endif
-    int Read(int pin, int type); //The function that reads an specific pin of the board.
-    //void Begin(int analogpin, int pinage[], int boardType);//This function sets up the board configurations
-    void doNotReadThisPin(char pin);
-    void doNotReadThesePins(char pins[]);
     int numberOfPins;
     int key_size;
+    int SIG; //The analog pin of the arduino that the board is gonna use
+    //bool pinsToNotRead[];
+    #if defined (chip74HC4051)
+      int pins_chip74HC4051[3];//pins for chip74HC4051
+    #endif
+    #if defined (chipCD74HC4067)
+      int pins_chipCD74HC4067[4];//pins for chipCD74HC4067
+    #endif
     typedef struct {
       int value;
       int type;
     }key;
-  protected:
-    int SIG; //The analog pin of the arduino that the board is gonna use
-    #if defined (chipCD74HC4067)
-      int pins_chipCD74HC4067[4];//pins for chipCD74HC4067
-    #endif
+
+    //Methods
+    analogMultiplexer();
+    void Begin(int analogpin, int pinage[], int boardType);
+    int Read(int pin, int type); //The function that reads an specific pin of the board.
+    //void Begin(int analogpin, int pinage[], int boardType);//This function sets up the board configurations
+    void doNotReadThisPin(char pin);
+    void doNotReadThesePins(char pins[]);
 };
 
 #endif

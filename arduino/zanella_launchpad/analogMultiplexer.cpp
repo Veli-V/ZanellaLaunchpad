@@ -17,28 +17,38 @@
 #define chip74HC4051 2 //this is the multiplexer I'm using in my projects
 #define chip74HC4051_KEYSIZE 8
 
+int pins_chip74HC4051[3];
+int SIG;
+int numberOfPins;
+int type;
 
+#if defined (chip74HC4051)
+  bool pinsToNotReadFromCD74HC4067[chip74HC4051_KEYSIZE];
+#endif
 
-analogMultiplexer::analogMultiplexer(int analogpin, int pinage[], int boardType) {
+analogMultiplexer::analogMultiplexer() {
+}
+
+void analogMultiplexer::Begin(int analogpin, int pinage[], int boardType) {
   SIG = analogpin;
-  int numberOfPins = sizeof(pinage)/sizeof(pinage[0]);
-  int type = boardType;
+  numberOfPins = sizeof(pinage)/sizeof(pinage[0]);
+  type = boardType;
+  
   //Declares the pins that will control the S0, S1, S2, S3, ... pins of the board, as output 
   for (int h=0; h<numberOfPins; h++) {
     pinMode(pinage[h], OUTPUT);
   }
   
   #if defined (chipCD74HC4067)
-    int pins_chipCD74HC4067[] = {pinage[0], pinage[1], pinage[2], pinage[3]}; 
-    //bool pinsToNotRead[chipCD74HC4067_KEYSIZE];
+    pins_chipCD74HC4067[] = {pinage[0], pinage[1], pinage[2],pinage[3]}; 
   #endif
   
   #if defined (chip74HC4051)
-    int pins_chip74HC4051[] = {pinage[0], pinage[1], pinage[2]}; 
-    //bool pinsToNotRead[chipCD74HC4067_KEYSIZE];
+    pins_chip74HC4051[0] = pinage[0];
+    pins_chip74HC4051[1] = pinage[1];
+    pins_chip74HC4051[2] = pinage[2];
   #endif
 }
-
 
 int analogMultiplexer::Read(int pin, int type) {//The method that reads a specific analog input of the board. For example Read(3) will read the fourth port (the port named 3, counting from 0 to 3).
    #if defined (chipCD74HC4067)
