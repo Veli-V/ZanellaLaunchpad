@@ -23,6 +23,7 @@
 
 
 //#define chipCD74HC4067 1 //this is just a number to identify the sparkfun board
+//#define chipCD74HC4067_KEYSIZE 16
 #define chip74HC4051 2 //this number identifies the other board 74HC4051
 #define chip74HC4051_KEYSIZE 8
 //you can use both the options at the same time or just one of the two

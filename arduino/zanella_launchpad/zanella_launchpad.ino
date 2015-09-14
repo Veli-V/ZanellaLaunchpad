@@ -37,8 +37,10 @@ void setup()
 
 void loop()
 {
-  for (char i = 0; i<=quantityOfBoards; i++) {
-    char numberOfPinsInTheBoard = board[i].numberOfPins;
+  //for (char i = 0; i<=quantityOfBoards; i++) {
+    //char numberOfPinsInTheBoard = board[i].numberOfPins;
+    char numberOfPinsInTheBoard = board[0].numberOfPins;
+    Serial.println(numberOfPinsInTheBoard);
     for (char k = 0; k<numberOfPinsInTheBoard;k++) { 
       //Serial.write(0xFF);//packet header
       //Serial.write(board[0].Read(0,chip74HC4051));
@@ -46,6 +48,6 @@ void loop()
       delay(1000);
       //Serial.write(0xFF);//packet footer
     }
-  }
+ // }
 }
 
