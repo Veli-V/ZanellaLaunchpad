@@ -21,7 +21,6 @@ analogMultiplexer board[quantityOfBoards];//Creates 4 multiplexer boards
 //*********************************************************************
 //END
 
-#define SERIAL_BPS 115200 //Serial Data Rate
 
 
 void setup()
@@ -29,6 +28,7 @@ void setup()
   Serial.begin(SERIAL_BPS);
 //board[n].Begin(h, controlpins, name_of_the_chip); where n is the number of the board in the array 'board', h is the analog pin that this board will use, name_of_the_chip is the name of the multiplexer
   int numberOfControlPins = sizeof(controlpins)/sizeof(controlpins[0]);
+  //Create your boards here
   board[0].Begin(0, controlpins, numberOfControlPins, chip74HC4051);  //Defines the analog pin 0 to control board[0] using chip 74HC4051, where 'controlpins' are the pins going to control it
   board[1].Begin(1, controlpins, numberOfControlPins, chip74HC4051);  //Same but assigns analog pin 1 to control board[1] using chip 74HC4051... 
   board[2].Begin(2, controlpins, numberOfControlPins, chip74HC4051);  //...

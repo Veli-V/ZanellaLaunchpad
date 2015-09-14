@@ -40,7 +40,7 @@ void analogMultiplexer::Begin(int analogpin, int pinage[], int numberOfControlPi
   //Declares the pins that will control the S0, S1, S2, S3, ... pins of the board, as output 
   for (int h=0; h<_numberOfControlPins; h++) {
     pinMode(pinage[h], OUTPUT);
-    Serial.println("pin: "+String(pinage[h])+" OUTPUT");
+    //Serial.println("pin: "+String(pinage[h])+" OUTPUT");//DEBUG
   }
   
   #if defined (chipCD74HC4067)
@@ -64,7 +64,7 @@ int analogMultiplexer::Read(int pin, int type) {//The method that reads a specif
      if (type==chipCD74HC4067){
       for (int k=0; k<_numberOfControlPins; k++) {
         digitalWrite(pins_chipCD74HC4067[k], bitRead(pin, k));
-        Serial.println("dW(pin: "+String(pins_chipCD74HC4067[k])+","+String(bitRead(pin, k))+")");//DEBUG
+        //Serial.println("dW(pin: "+String(pins_chipCD74HC4067[k])+","+String(bitRead(pin, k))+")");//DEBUG
       }
      return analogRead(SIG);
      }
@@ -75,7 +75,7 @@ int analogMultiplexer::Read(int pin, int type) {//The method that reads a specif
       Serial.println("startshere");
       for (int k=0; k<_numberOfControlPins; k++) {
         digitalWrite(pins_chip74HC4051[k], bitRead(pin, k));
-        Serial.println("dW(pin: "+String(pins_chip74HC4051[k])+","+String(bitRead(pin, k))+")");//DEBUG
+        //Serial.println("diditalWrite(pin: "+String(pins_chip74HC4051[k])+","+String(bitRead(pin, k))+")");//DEBUG
       }
       return analogRead(SIG);
     }
