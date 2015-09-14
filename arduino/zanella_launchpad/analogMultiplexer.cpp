@@ -27,10 +27,11 @@ int type;
 #endif
 
 analogMultiplexer::analogMultiplexer() {
+  
 }
 
 void analogMultiplexer::Begin(int analogpin, int pinage[], int numberOfControlPins, int boardType) {
-  //delay(1000);
+  //delay(1000); //DEBUG
   SIG = analogpin;
   numberOfPins = numberOfControlPins;
   type = boardType;
@@ -42,7 +43,10 @@ void analogMultiplexer::Begin(int analogpin, int pinage[], int numberOfControlPi
   }
   
   #if defined (chipCD74HC4067)
-    pins_chipCD74HC4067[] = {pinage[0], pinage[1], pinage[2],pinage[3]}; 
+    pins_chipCD74HC4067[0] = pinage[0];
+    pins_chipCD74HC4067[1] = pinage[1];
+    pins_chipCD74HC4067[2] = pinage[2];
+    pins_chipCD74HC4067[3] = pinage[3];
   #endif
   
   #if defined (chip74HC4051)
@@ -54,21 +58,21 @@ void analogMultiplexer::Begin(int analogpin, int pinage[], int numberOfControlPi
 
 int analogMultiplexer::Read(int pin, int type) {//The method that reads a specific analog input of the board. For example Read(3) will read the fourth port (the port named 3, counting from 0 to 3).
    #if defined (chipCD74HC4067)
-   if (type==chipCD74HC4067){
-     for(int i = 0; i < chipCD74HC4067_KEYSIZE; i++)
-     {
-       digitalWrite(pins_chipCD74HC4067[i], bitRead(pin, i));
-     }
+     if (type==chipCD74HC4067){
+      for (int k=0; k<numberOfPins; k++) {
+        digitalWrite(pins_chipCD74HC4067[k], bitRead(pin, k));
+        Serial.println("dW(pin: "+String(pins_chipCD74HC4067[k])+","+String(bitRead(pin, k))+")");//DEBUG
+      }
      return analogRead(SIG);
-   }
+     }
    #endif
    
    #if defined (chip74HC4051)
     if (type==chip74HC4051){//even if there's minor difference between these two boards, i prefer to write a separate case for each one, because other boards may be a lot different
       Serial.println("startshere");
-      for (int k=0; k<3; k++) {
+      for (int k=0; k<numberOfPins; k++) {
         digitalWrite(pins_chip74HC4051[k], bitRead(pin, k));
-        Serial.println("dW(pin: "+String(pins_chip74HC4051[k])+","+String(bitRead(pin, k))+")");
+        Serial.println("dW(pin: "+String(pins_chip74HC4051[k])+","+String(bitRead(pin, k))+")");//DEBUG
       }
       return analogRead(SIG);
     }
