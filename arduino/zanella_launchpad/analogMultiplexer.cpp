@@ -1,27 +1,24 @@
 /*
-  multiplexer.cpp - Library for the multiplexer chip CD74HC4067 (and maybe others)
+  analogMultiplexer.cpp - Library for the multiplexer chip CD74HC4067 and chip 74HC4051
   Created by Lucas Zanella, March 24, 2014.
   Released into the public domain.
   http://lucaszanella.com
 */
-
 #include "analogMultiplexer.h"
 #include "Arduino.h"
 
-
-//Configs for CD74HC4067 chip
-//#define chipCD74HC4067 1 //This is the sparkfun multiplexer board I use in my projects.
+//If you want to use this class alone for other projects, here's the definitions that are already included by definition.h (not a part of this class)
+//Check the analogMultiplexer class here: ADDRESS_HERE
+//#define chipCD74HC4067 1 //this is just a number to identify the sparkfun board
 //#define chipCD74HC4067_KEYSIZE 16
+//#define chip74HC4051 2 //this number identifies the other board 74HC4051
+//#define chip74HC4051_KEYSIZE 8
 
-//Configs for 74HC4051 chip
-#define chip74HC4051 2 //this is the multiplexer I'm using in my projects
-#define chip74HC4051_KEYSIZE 8
 
 int pins_chip74HC4051[3];
-int SIG;
-int numberOfPins;
+int _analogPin;
 int _numberOfControlPins;
-int type;
+int _boardType;
 
 #if defined (chip74HC4051)
   bool pinsToNotReadFromCD74HC4067[chip74HC4051_KEYSIZE];
@@ -31,12 +28,12 @@ analogMultiplexer::analogMultiplexer() {
   
 }
 
-void analogMultiplexer::Begin(int analogpin, int pinage[], int numberOfControlPins, int boardType) {
+void analogMultiplexer::Begin(int analogPin, int pinage[], int numberOfControlPins, int boardType) {
   //delay(1000); //DEBUG
-  SIG = analogpin;
+  _analogPin = analogPin;
   _numberOfControlPins = numberOfControlPins;
-  type = boardType;
-  Serial.println("number of pins :"+String(_numberOfControlPins));
+  _boardType = boardType;
+  Serial.println("number of pins :"+String(_numberOfControlPins));//DEBUG
   //Declares the pins that will control the S0, S1, S2, S3, ... pins of the board, as output 
   for (int h=0; h<_numberOfControlPins; h++) {
     pinMode(pinage[h], OUTPUT);
@@ -66,21 +63,22 @@ int analogMultiplexer::Read(int pin, int type) {//The method that reads a specif
         digitalWrite(pins_chipCD74HC4067[k], bitRead(pin, k));
         //Serial.println("dW(pin: "+String(pins_chipCD74HC4067[k])+","+String(bitRead(pin, k))+")");//DEBUG
       }
-     return analogRead(SIG);
+     return analogRead(_analogPin);
      }
    #endif
    
    #if defined (chip74HC4051)
     if (type==chip74HC4051){//even if there's minor difference between these two boards, i prefer to write a separate case for each one, because other boards may be a lot different
-      Serial.println("startshere");
+      Serial.println("startshere");//DEBUG
       for (int k=0; k<_numberOfControlPins; k++) {
         digitalWrite(pins_chip74HC4051[k], bitRead(pin, k));
         //Serial.println("diditalWrite(pin: "+String(pins_chip74HC4051[k])+","+String(bitRead(pin, k))+")");//DEBUG
       }
-      return analogRead(SIG);
+      return analogRead(_analogPin);
     }
    #endif
 }
+
 
 void doNotReadThisPin (char pin) {//Specify a pin that you dan't want to be read
   //pinsToNotRead[pin] = 1;

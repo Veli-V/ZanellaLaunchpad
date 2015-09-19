@@ -1,5 +1,5 @@
 /*
-  Multiplexer.h - Library for the multiplexer chip CD74HC4067 
+  analogMultiplexer.h - Library for the multiplexer chip CD74HC4067 and chip 74HC4051
   Created by Lucas Zanella, March 24, 2014.
   Released into the public domain.
   http://lucaszanella.com
@@ -21,10 +21,7 @@ class analogMultiplexer
 {
   public:
     //Variables
-    int type;
-    int numberOfPins;
-    int key_size;
-    int SIG; //The analog pin of the arduino that the board is gonna use
+    int numberOfPins ;
     //bool pinsToNotRead[];
     #if defined (chip74HC4051)
       int pins_chip74HC4051[3];//pins for chip74HC4051

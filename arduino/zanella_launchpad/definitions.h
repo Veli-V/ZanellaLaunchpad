@@ -4,6 +4,8 @@
   Released into the public domain.
   http://lucaszanella.com
 */
+#ifndef definitions_h
+#define definitions_h
 
 //Types of table objects
 #define LAUNCHPAD 0 //Launchpad object has number 0
@@ -22,9 +24,15 @@
 //without a multiplexer board. You can uncomment all of these options at the same time.
 
 
-//#define useAnalogPort
+//USER CUSTOMIZABLE PART
+//*********************************************************************
+//Define here the types of board you're going to use in this project so they get compiled with the code
+
 //#define chipCD74HC4067 1 //this is just a number to identify the sparkfun board
 //#define chipCD74HC4067_KEYSIZE 16
 #define chip74HC4051 2 //this number identifies the other board 74HC4051
 #define chip74HC4051_KEYSIZE 8
 //you can use both the options at the same time or just one of the two
+//*********************************************************************
+
+#endif
