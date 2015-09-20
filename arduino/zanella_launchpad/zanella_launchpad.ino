@@ -1,6 +1,6 @@
 /*
   zanella_launchpad.ino - The Launchpad Project.
-  Created by Lucas Zanella, March 24, 2014.
+  Created by Lucas Zanella, September 14, 2015.
   Released into the public domain.
   http://lucaszanella.com
 */
@@ -37,17 +37,17 @@ void setup()
 
 void loop()
 {
-  //for (char i = 0; i<=quantityOfBoards; i++) {
-    //char numberOfPinsInTheBoard = board[i].numberOfPins;
-    char numberOfPinsInTheBoard = board[0].numberOfPins;
-    Serial.println(numberOfPinsInTheBoard);
-    for (char k = 0; k<numberOfPinsInTheBoard;k++) { 
-      //Serial.write(0xFF);//packet header
-      //Serial.write(board[0].Read(0,chip74HC4051));
-      int a = board[0].Read(k,chip74HC4051);
-      delay(1000);
-      //Serial.write(0xFF);//packet footer
-    }
- // }
+//for (char i = 0; i<=quantityOfBoards; i++) {
+  //char numberOfPinsInTheBoard = board[i].numberOfPins;
+  char numberOfPinsInTheBoard = board[0].numberOfPins;
+  Serial.println(numberOfPinsInTheBoard);
+  for (char k = 0; k<numberOfPinsInTheBoard;k++) { 
+    //Serial.write(0xFF);//packet header
+    //Serial.write(board[0].Read(0,chip74HC4051));
+    int a = board[0].Read(k);
+    delay(1000);
+    //Serial.write(0xFF);//packet footer
+  }
+//}
 }
 

@@ -37,7 +37,7 @@ class analogMultiplexer
     //Methods
     analogMultiplexer();
     void Begin(int analogpin, int pinage[], int numberOfControlPins, int boardType);
-    int Read(int pin, int type); //The function that reads an specific pin of the board.
+    int Read(int pin); //The function that reads an specific pin of the board.
     //void Begin(int analogpin, int pinage[], int boardType);//This function sets up the board configurations
     void doNotReadThisPin(char pin);
     void doNotReadThesePins(char pins[]);

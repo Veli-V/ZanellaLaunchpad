@@ -56,27 +56,27 @@ void analogMultiplexer::Begin(int analogPin, int pinage[], int numberOfControlPi
   #endif
 }
 
-int analogMultiplexer::Read(int pin, int type) {//The method that reads a specific analog input of the board. For example Read(3) will read the fourth port (the port named 3, counting from 0 to 3).
-   #if defined (chipCD74HC4067)
-     if (type==chipCD74HC4067){
-      for (int k=0; k<_numberOfControlPins; k++) {
-        digitalWrite(pins_chipCD74HC4067[k], bitRead(pin, k));
-        //Serial.println("dW(pin: "+String(pins_chipCD74HC4067[k])+","+String(bitRead(pin, k))+")");//DEBUG
-      }
-     return analogRead(_analogPin);
-     }
-   #endif
-   
-   #if defined (chip74HC4051)
-    if (type==chip74HC4051){//even if there's minor difference between these two boards, i prefer to write a separate case for each one, because other boards may be a lot different
-      Serial.println("startshere");//DEBUG
-      for (int k=0; k<_numberOfControlPins; k++) {
-        digitalWrite(pins_chip74HC4051[k], bitRead(pin, k));
-        //Serial.println("diditalWrite(pin: "+String(pins_chip74HC4051[k])+","+String(bitRead(pin, k))+")");//DEBUG
-      }
-      return analogRead(_analogPin);
+int analogMultiplexer::Read(int pin) {//The method that reads a specific analog input of the board. For example Read(3) will read the fourth port (the port named 3, counting from 0 to 3).
+ #if defined (chipCD74HC4067)
+   if (_boardType==chipCD74HC4067){
+    for (int k=0; k<_numberOfControlPins; k++) {
+      digitalWrite(pins_chipCD74HC4067[k], bitRead(pin, k));
+      //Serial.println("dW(pin: "+String(pins_chipCD74HC4067[k])+","+String(bitRead(pin, k))+")");//DEBUG
     }
-   #endif
+   return analogRead(_analogPin);
+   }
+ #endif
+ 
+ #if defined (chip74HC4051)
+  if (_boardType==chip74HC4051){//even if there's minor difference between these two boards, i prefer to write a separate case for each one, because other boards may be a lot different
+    Serial.println("startshere");//DEBUG
+    for (int k=0; k<_numberOfControlPins; k++) {
+      digitalWrite(pins_chip74HC4051[k], bitRead(pin, k));
+      //Serial.println("diditalWrite(pin: "+String(pins_chip74HC4051[k])+","+String(bitRead(pin, k))+")");//DEBUG
+    }
+    return analogRead(_analogPin);
+  }
+ #endif
 }
 
 
